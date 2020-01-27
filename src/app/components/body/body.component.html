@@ -1,0 +1,32 @@
+<div class="row">
+
+    <div class="col s5">
+        <h3>*ngIF</h3>
+        <div *ngIf="mostrar" class="row">
+            <div class="card white darken-1">
+                <div class="card-content black-text">
+                    <span class="card-title">{{frase.autor}}</span>
+                    <p>{{frase.mensaje}}</p>
+                </div>
+                <div class="card-action">
+
+                </div>
+            </div>
+        </div>
+        <a (click)="mostrar=!mostrar" class="waves-effect waves-light btn">Mostrar/Oultar</a>
+    </div>
+    <div class="col s2"></div>
+    <div class="col s5">
+        <h3>*ngFor</h3>
+        <div class="row">
+            <div class="card white darken-1">
+                <div class="card-content black-text">
+                    <span class="card-title">Alumnos</span>
+                    <ul>
+                        <li *ngFor="let Alumno of Alumnos; let i = index">{{i+1}} {{Alumno}}</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
